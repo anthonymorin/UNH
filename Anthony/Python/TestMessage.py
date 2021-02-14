@@ -29,7 +29,7 @@ def SendText(message, phoneNumber, emailAddress, emailPW, carrier = 'tmobile', m
     #the destination phone number formatted as an email address, according to the carrier's format
 	to_number = f'{phoneNumber}.{carriers[carrier]}'
 
-	# Establish a secure session with gmail's outgoing SMTP server using your gmail account
+	# Establish a secure session with the mailserver's outgoing SMTP server using the provided email account
 	server = smtplib.SMTP(mailserver, mailServerPort)
 	server.starttls()
 	server.login(emailAddress, emailPW)
