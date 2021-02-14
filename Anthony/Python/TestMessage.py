@@ -4,9 +4,9 @@ import smtplib
 
 carriers = {
 	'att':    '@mms.att.net',
+	'sprint':   '@page.nextel.com',
 	'tmobile':' @tmomail.net',
-	'verizon':  '@vtext.com',
-	'sprint':   '@page.nextel.com'
+	'verizon':  '@vtext.com'
 }
 
 def SendText(message, phoneNumber, emailAddress, emailPW, carrier = 'tmobile', mailserver = "smtp.gmail.com", mailServerPort = 587):
@@ -26,6 +26,7 @@ def SendText(message, phoneNumber, emailAddress, emailPW, carrier = 'tmobile', m
 		mailserver (str, optional): The SMTP server to use. Defaults to "smtp.gmail.com".
 		mailServerPort (int, optional): The port of the SMTP server to use. Defaults to 587.
 	"""
+
     #the destination phone number formatted as an email address, according to the carrier's format
 	to_number = f'{phoneNumber}.{carriers[carrier]}'
 
