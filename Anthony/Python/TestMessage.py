@@ -1,7 +1,6 @@
 
-import authenticator
 import smtplib
-import secrets
+#import secrets
 
 carriers = {
 	'att':    '@mms.att.net',
